@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$("form").on("submit", function(){
+		if ($("input:text").val() == 'admin' || $("input:text").val() == 'administrator') {
+			$("input:hidden").val("admin");
+		}
+		else {
+			$("input:hidden").val("user");
+		}
+	});	
+	
+	
+});
+
+</script>
+</head>
+<body>
+	<form action="login">
+		아이디입력 : <input type="text" name="id"><br>
+		암호입력 : <input type="password" name="pw"><br>
+		<input type="hidden" name="role" value="LOGIN">
+	</form>
+</body>
+</html>
